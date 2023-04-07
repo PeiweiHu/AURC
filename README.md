@@ -4,7 +4,7 @@ This is the repository of the study *AURC: Detecting Errors in Program Code and 
 
 ## Usage
 
-The artifact will be available soon.
+The complete code components will be made available prior to USENIX Security 2023 (August 9, 2023).
 
 ## Trophy
 
