@@ -4,7 +4,10 @@ This is the repository of the study *AURC: Detecting Errors in Program Code and 
 
 ## Usage
 
-The complete code components will be made available prior to USENIX Security 2023 (August 9, 2023).
+TODO
+
++ update the classifier-related code
++ write guide
 
 ## Trophy
 
