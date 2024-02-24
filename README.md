@@ -4,10 +4,35 @@ This is the repository of the study *AURC: Detecting Errors in Program Code and 
 
 ## Usage
 
-TODO
+### 1. Compile
 
-+ update the classifier-related code
-+ write guide
+After compiling by `make`, the binary `main` appears.
+
+### 2. Generate the Information from Three AURs
+
+**Callee:**
+
+```bash
+./main --cbp `python script/extract_bc.py -p bitcode/openssl`
+```
+
+**Caller:**
+
+```bash
+./main --cops `python script/extract_bc.py -p bitcode/openssl`
+```
+
+**Document:**
+
+You can train your own model based on the codebase you wanna test. We use
+bare Bert. The result is good enough. We provide the doc info of OpenSSL in
+`result/doc_openssl.json`.
+
+### 3. Compare:
+
+```bash
+python cmp.py --cbp=./result/return_values.txt --cops=./result/cops.txt --doc=./result/doc_openssl.json --mapping=./result/macro_enum.txt --nonexist_pos --nonexist_neg --confuse_pos_and_neg_ssl -s 
+```
 
 ## Trophy
 
